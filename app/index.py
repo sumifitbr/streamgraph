@@ -3,8 +3,8 @@ from streamlit_agraph import agraph, Config, Node, Edge
 from database import Neo4jDatabase
 import os
 
-# Carregar configurações do Neo4j a partir de variáveis de ambiente
-neo4j_url = os.getenv("NEO4J_URL", "bolt://bed178b3.databases.neo4j.io:7687")
+# Carregar configurações do Neo4j AuraDB a partir de variáveis de ambiente
+neo4j_url = os.getenv("NEO4J_URL", "neo4j+s://bed178b3.databases.neo4j.io")
 neo4j_user = os.getenv("NEO4J_USER", "laralves@gmail.com")
 neo4j_password = os.getenv("NEO4J_PASSWORD", "Aless@1903")
 
