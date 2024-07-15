@@ -3,10 +3,15 @@ from streamlit_agraph import agraph, Config, Node, Edge
 from database import Neo4jDatabase
 import os
 
+# Variaveis
+NEO4J_USERNAME='neo4j'
+NEO4J_PASSWORD='7R6dC5XNfYjKOJVAy1zdk_I5nlFqZ4qHKFbiihykq3I'
+AURA_INSTANCEID='f9d70cee'
+
 # Carregar configurações do Neo4j AuraDB a partir de variáveis de ambiente
-neo4j_url = os.getenv("NEO4J_URL", "neo4j+s://bed178b3.databases.neo4j.io")
-neo4j_user = os.getenv("NEO4J_USER", "neo4j")
-neo4j_password = os.getenv("NEO4J_PASSWORD", "7R6dC5XNfYjKOJVAy1zdk_I5nlFqZ4qHKFbiihykq3I")
+neo4j_url = os.getenv(f"NEO4J_URL", "neo4j+s://{AURA_INSTANCEID}.databases.neo4j.io")
+neo4j_user = os.getenv(f"NEO4J_USER", "{NEO4J_USERNAME}")
+neo4j_password = os.getenv(f"NEO4J_PASSWORD", "{NEO4J_PASSWORD}")
 
 # Inicializar a conexão com o banco de dados
 db = Neo4jDatabase(neo4j_url, neo4j_user, neo4j_password)
