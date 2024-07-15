@@ -5,8 +5,8 @@ import os
 
 # Carregar configurações do Neo4j AuraDB a partir de variáveis de ambiente
 neo4j_url = os.getenv("NEO4J_URL", "neo4j+s://bed178b3.databases.neo4j.io")
-neo4j_user = os.getenv("NEO4J_USER", "laralves@gmail.com")
-neo4j_password = os.getenv("NEO4J_PASSWORD", "Aless@1903")
+neo4j_user = os.getenv("NEO4J_USER", "neo4j")
+neo4j_password = os.getenv("NEO4J_PASSWORD", "7R6dC5XNfYjKOJVAy1zdk_I5nlFqZ4qHKFbiihykq3I")
 
 # Inicializar a conexão com o banco de dados
 db = Neo4jDatabase(neo4j_url, neo4j_user, neo4j_password)
